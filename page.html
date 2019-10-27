@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>-</title>
+</head>
+<body>
+	<table id="color"></table>
+	<table id="root"></table>
+	<button style="background: forestgreen; width: 128px; height: 32px; border: none" onclick="ok()">OKAY</button>
+	<script type="text/javascript">
+		var img = [];
+		var colors = ["#000000", "#000050", "#0000A0", "#0000F0"];
+		var current = 3;
+		var inner = '<tr>';
+		for (var i = 0; i < 4; i++) {
+			inner += '<td style="background:' + colors[i] + '" width="64px" height="64px" onclick="s('
+				+ i +
+				')"></td>';
+		}
+		inner += '</tr>'
+		document.getElementById('color').innerHTML = inner;
+		inner = '';
+		for (var i = 0; i < 8; i++) {
+			img.push([]);
+			inner += '<tr>';
+			for (var j = 0; j < 8; j++) {
+				img[i].push(0);
+				inner += '<td style="background:#000000" width="64px" height="64px" onclick="c('
+					+ j + ',' + i +
+					',this)"></td>';
+			}
+			inner += '</tr>';
+		}
+		document.getElementById('root').innerHTML = inner;
+		function c(x, y, f) {
+			img[x][y] = current;
+			f.style.background = colors[current];
+		}
+		function s(c){
+			current = c;
+		}
+		function ok(){
+			var req = new XMLHttpRequest();
+			req.open("PUT", "img", false);
+			req.send(JSON.stringify(img).replace(/[\[\],]/g, ''));
+		}
+	</script>
+</body>
+</html>

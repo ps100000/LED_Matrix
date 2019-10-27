@@ -12,8 +12,8 @@
             "type": "platformio-debug",
             "request": "launch",
             "name": "PIO Debug",
-            "executable": "/home/dcz/Documents/PlatformIO/Projects/181228-113005-esp32doit-devkit-v1/.pioenvs/esp32doit-devkit-v1/firmware.elf",
-            "toolchainBinDir": "/home/dcz/.platformio/packages/toolchain-xtensa32/bin",
+            "executable": "/home/decoder/Desktop/ESP/LED_Matrix/.pio/build/esp32doit-devkit-v1/firmware.elf",
+            "toolchainBinDir": "/home/decoder/.platformio/packages/toolchain-xtensa32/bin",
             "preLaunchTask": {
                 "type": "PlatformIO",
                 "task": "Pre-Debug"
@@ -24,8 +24,8 @@
             "type": "platformio-debug",
             "request": "launch",
             "name": "PIO Debug (skip Pre-Debug)",
-            "executable": "/home/dcz/Documents/PlatformIO/Projects/181228-113005-esp32doit-devkit-v1/.pioenvs/esp32doit-devkit-v1/firmware.elf",
-            "toolchainBinDir": "/home/dcz/.platformio/packages/toolchain-xtensa32/bin",
+            "executable": "/home/decoder/Desktop/ESP/LED_Matrix/.pio/build/esp32doit-devkit-v1/firmware.elf",
+            "toolchainBinDir": "/home/decoder/.platformio/packages/toolchain-xtensa32/bin",
             "internalConsoleOptions": "openOnSessionStart"
         }
     ]
